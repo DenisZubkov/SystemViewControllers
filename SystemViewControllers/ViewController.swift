@@ -72,7 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         mailComposeViewController.setSubject("Получи картинку")
         mailComposeViewController.setMessageBody("Шлю картинку", isHTML: false)
         if let dataImage =  imageView.image?.jpegData(compressionQuality: 1) {
-            mailComposeViewController.addAttachmentData(dataImage, mimeType: "image/jpg", fileName: "Image")
+            mailComposeViewController.addAttachmentData(dataImage, mimeType: "image/jpg", fileName: "image.jpg")
         }
         if MFMailComposeViewController.canSendMail() {
             present(mailComposeViewController, animated: true, completion: nil)
